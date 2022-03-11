@@ -1,0 +1,50 @@
+﻿using System;
+
+namespace test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int hero = 20;
+            int health = 100;
+            int enemyhealth = 70;
+
+
+            Console.WriteLine("my health is " + health);
+
+
+            damaged();
+
+
+            Console.WriteLine("OUCH That hurt now my health is " + health);
+
+            boost();
+
+            Console.WriteLine("Aha now i have drank my elixer now my health is " + health);
+            int[] healtharray = { health, enemyhealth };
+            if (health > enemyhealth)
+            {
+                Console.WriteLine("Plot armor is OP");
+            }
+
+            
+                else if (enemyhealth > health) 
+            {  
+                Console.WriteLine("Im just.. a . side character?!?");
+            }
+            int boost()
+            {
+                health = health + 10;
+                return health;
+            }
+
+
+            int damaged()
+            {
+                health = health - 20;
+                return health;
+            }
+        }
+    }
+}
